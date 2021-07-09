@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8" />
+        <title>購物車</title>
+
+        <style>
+            div{padding: 50px;font-size: 50px;}
+            input{font-size: 35px;}
+            label{
+                position: absolute;
+                right: 0px;
+                border: 3px solid #73AD21;
+                padding: 20px;
+                font-size: 60px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="show"></p>
+        <label id="total"></label>
+
+        <script>
+            var cookieStr = document.cookie;
+            var cookieArr = JSON.parse(cookieStr);
+
+            var total = 0;
+            for(var i = 0; i<cookieArr.length; i++){
+                var str = "<div>"+cookieArr[i].id + "：<input id="+ i + 
+                    " type='number' onchange='count()' value=" + cookieArr[i].number+" min=0></div>"
+                document.getElementById("show").innerHTML += str;
+                total += cookieArr[i].cost*cookieArr[i].number;
+            }
+            count();
+
+            function count(){
+                total = 0;
+                var cookieStr = document.cookie;
+                var cookieArr = JSON.parse(cookieStr);
+
+                for(i = 0 ; i<cookieArr.length; i++){
+                    cookieArr[i].number=document.getElementById(i).value;
+                    total += cookieArr[i].cost*cookieArr[i].number;
+                }
+                document.cookie = (JSON.stringify(cookieArr));
+                document.getElementById("total").innerText = "總共:" + total  + "元";
+            }
+        </script>
+    </body>
+</html>
