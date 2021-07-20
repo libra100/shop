@@ -1,0 +1,42 @@
+:root{
+    --warning: #ffa042;
+}
+.active{
+    color: #d26900;
+}
+nav{
+    margin-top: 5px;
+}
+nav li{
+    padding-right: 15px;
+}
+.form-control:focus {
+    color: #ffa042;
+}
+
+.form-control{
+    color: #ea7500;
+}
+.form-control::placeholder{
+    color: #ffa042;
+}
+.form-control::-webkit-input-placeholder{
+    color: #ffa042;
+}
+.form-control:-ms-input-placeholder{
+    color: #ffa042;
+}
+.form-control::-moz-placeholder{
+    color: #ffa042;
+}
+#intro li a{
+    color: #ea7500;
+    font-size: 28px;
+}
+#intro li a.active{
+    font-weight: 800;
+    color: #d26900;
+}
+#intro li a:hover {
+    color: #d26900;
+}
