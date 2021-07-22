@@ -1,41 +1,114 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
     <head>
-        <meta charset="utf-8" />
-        <title></title>
-        <style>
-            @import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-            body{
-                padding-left: 100px;
-                font-family: 'cwTeXFangSong', serif;
-                line-height: 2;
-                font-size: 100px;
-                font-weight: 600;
-                background-size: cover;
-            }
-            a:link, a:visited{
-                text-decoration:none;
-                color: red;
-            }
-            a:hover, a:active{
-                color: black;
-                
-            }
-        </style>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/fc14507202.js" crossorigin="anonymous"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="index.css">
+
+      <title>首頁</title>
     </head>
-    <body background="tree.jpg">
-        <a href="house.html" title="">① 紙紮屋</a><br>
-        <a href="watch.html" title="">② 手錶、鑽石、項鍊</a><br>
-        <a href="phone.html" title="">③ 手機、平板</a><br>
-        <a href="ship.html" title="">④ 龍船</a><br>
-        <a href="treasure.html" title="">⑤ 元寶、金庫</a><br>
-        <a href="vehicle.html" title="">⑥ 汽機車</a><br>
-        <a href="clothes.html" title="">⑦ 男女服飾</a><br>
-        <a href="shoes.html" title="">⑧ 鞋子</a><br>
-        <a href="ingots.html" title="">⑨ 紙紮美妝保養</a><br>
-        <a href="bag.html" title="">⑩ 包包</a><br>
-        <a href="candle.html" title="">⑪ 八國蠟燭</a><br>
-        <a href="other.html" title="">⑫ 休閒娛樂</a><br>
+        
+    <body>
+        <nav>
+          <ul class="nav justify-content-end">
+              <li class="nav-item">
+                  <button type="button" class="btn btn-outline-warning">購物車</button>
+              </li>
+              <li class="nav-item">
+                  <button type="button" class="btn btn-secondary btn-outline-warning" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Line: Facebook: 電話:">聯絡我們</button>
+              </li>
+              <li class="nav-item">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" placeholder="搜尋" aria-label="搜尋" aria-describedby="button-addon2" style="border:1px #ffa042 solid;">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-warning" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        <section id="intro">
+            <div class="container-fluid">
+                <div class="row ml-5">
+                    <div class="col-md-3">
+                        <img src="picture/logo.jpg">   
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a class="nav-link active">首頁</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">紙紮屋</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">手錶、鑽石、項鍊</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">手機、平板</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">龍船</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">元寶、金庫</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">汽機車</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">男女服飾</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">鞋子</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">紙紮美妝保養</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">包包</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="candle.html">八國蠟燭</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">休閒娛樂</a>
+                            </li>
+                          </ul>
+                    </div>
+                    <div class="col-md-9 text-center">
+                      <article>
+                        <h2>賣場介紹</h2>
+                        <div class="col-md-12 text-left">
+                        <p class="lead">商品內容</p>
+                        <p>
+                          <strong>滿$1200免運</strong><br>
+                          有問題都能聊聊詢問<br>
+                          <strong>萬鑫堂</strong>為網路電商，我們在價格與品質上都會做好把關👍👍👍<br>
+                          本賣場專賣香品、紙紮藝品、金銀紙、蠟燭、發財金，種類繁多，歡迎聊聊詢問！<br>
+                          用虔誠的心做好每一支香<br>
+                          ❗️因種類眾多，如未見您所需要的商品，可以詢問我們<br>
+                          ❗️如對商品有任何疑問，請先聊聊詢問後再下單<br>
+                          ❗️如需求數量較多歡迎聊聊議價<br>
+                          ❗️部分商品體積或重量超過超商取貨限制，需要宅配，下單前請先聊聊詢問<br>
+                          ⚠️⚠️⚠️若您的到貨地點為偏遠地區或離島地區，煩請於客服連絡後，補刷不足之運費金額<br>
+                          偏遠地區包含：<br>
+                          屏東、基隆、花蓮、台東、宜蘭、偏遠高山區等，以及離島地區〈如金門、馬祖、澎湖、綠島、琉球、小琉球等地〉<br>
+                          需額外酌收運費，如運費金額不足時，客服人員將主動以電話通知，並請消費者至【離島&偏遠地區運費加購】補刷運費金額不足之部分。</p>
+                        </div>
+                      </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="index.js"></script>
     </body>
 </html>

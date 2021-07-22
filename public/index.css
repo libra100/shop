@@ -1,6 +1,15 @@
 :root{
     --warning: #ffa042;
 }
+img{
+    max-width: 100%;
+}
+h1,h2,h3,h4,h5,h6,p,li,button{
+    font-family: 'Noto Serif TC', serif;
+}
+h1,h2,h3,h4,h5,h6,p{
+    color: #6C6C6C;
+}
 .active{
     color: #d26900;
 }
@@ -9,6 +18,16 @@ nav{
 }
 nav li{
     padding-right: 15px;
+}
+.btn-outline-warning{
+    color: #ffa042;
+    background-color: white;
+    border-color: #ffa042;
+}
+.btn-outline-warning:hover{
+    color: white;
+    background-color: #ffa042;
+    border-color: #ffa042;
 }
 .form-control:focus {
     color: #ffa042;
@@ -34,9 +53,15 @@ nav li{
     font-size: 28px;
 }
 #intro li a.active{
-    font-weight: 800;
+    font-weight: 900;
     color: #d26900;
 }
 #intro li a:hover {
     color: #d26900;
+}
+#intro img{
+    margin-bottom: 25px;
+}
+article{
+    margin-top: 80px;
 }
