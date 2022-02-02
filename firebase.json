@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "wanxin",
-    "public": "public/page",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -76,6 +76,10 @@ function list(o){
                     button.appendChild(document.createTextNode(doc.data().twelveth));
                     break;
             }
+            if(o == "首頁")
+                document.title = o+"-萬鑫堂";
+            else
+                document.title = o+"-商品分類-萬鑫堂";
             if(button.id == o)
                 button.className = "nav-link active";
             else
@@ -130,6 +134,7 @@ function getData(o){
                 var img = document.createElement("img");
                 img.src = url;
                 img.className = "card-img-top"
+                img.alt = doc.data().name;
                 a.appendChild(img);
                 
             }).catch(e=>{
