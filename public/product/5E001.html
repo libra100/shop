@@ -13,10 +13,11 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200&display=swap" rel="stylesheet">
 
-      <link rel="stylesheet" href="index.css">
+      <link rel="stylesheet" href="../css/index.css">
       <style>
-          article{
-              padding-left: 50px;
+          article img{
+              width: 100%;
+              border-radius: 20%;
           }
       </style>
 
@@ -27,10 +28,10 @@
         <nav>
           <ul class="nav justify-content-end">
               <li class="nav-item">
-                  <button type="button" class="btn btn-outline-warning">購物車</button>
+                  <a href="shop.html"><button type="button" class="btn btn-outline-warning">購物車</button></a>
               </li>
               <li class="nav-item">
-                  <button type="button" class="btn btn-outline-warning">聯絡我們</button>
+                  <button type="button" class="btn btn-secondary btn-outline-warning" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Line: Facebook: 電話:">聯絡我們</button>
               </li>
               <li class="nav-item">
                 <div class="input-group mb-3">
@@ -46,10 +47,10 @@
             <div class="container-fluid">
                 <div class="row ml-5">
                     <div class="col-md-3">
-                        <img src="picture/logo.jpg">   
+                        <img src="/public/picture/logo.jpg">   
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                              <a class="nav-link" href="index.html">首頁</a>
+                              <a class="nav-link" href="/public/index.html">首頁</a>
                             </li>
                             <li class="nav-item">
                               <a class="nav-link" href="#">紙紮屋</a>
@@ -79,31 +80,47 @@
                               <a class="nav-link" href="#">紙紮美妝保養</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">包包</a>
-                            </li>
-                            <li class="nav-item active">
-                              <a class="nav-link" href="#">八國蠟燭</a>
+                              <a class="nav-link" href="bag.html">包包</a>
                             </li>
                             <li class="nav-item">
-                              <a class="nav-link" href="#">休閒娛樂</a>
+                              <a class="nav-link" href="candle.html">八國蠟燭</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="other.html">休閒娛樂</a>
                             </li>
                           </ul>
                     </div>
-                    <div class="col-md-9 text-left">
+                    <div class="col-md-9 text-center">
                       <article>
-                        <h2>八國蠟燭</h2>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">商品名稱</h5>
-                              <p class="card-text">商品介紹</p>
-                              <a href="#" class="btn btn-primary">加入購物車</a>
+                        <h2>男士西裝</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="../picture/5E001.png">
                             </div>
-                          </div>
+                            <div class="col-md-6 text-left">
+                            <p class="lead">商品介紹</p>
+                            <p>
+                            內容
+                            </p>
+                        </div>
                       </article>
                     </div>
                 </div>
             </div>
         </section>
+        <section id="footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <footer>
+                  <span>電話:</span>&nbsp;&nbsp;
+                  <span>Facdbook:</span>&nbsp;&nbsp;
+                  <span>Line:</span>
+                </footer>
+              </div>
+            </div>
+        </div>
+        </section>
+        <script src="../javascript/index.js"></script>
     </body>
 </html>

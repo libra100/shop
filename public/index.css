@@ -10,14 +10,29 @@ h1,h2,h3,h4,h5,h6,p,li,button{
 h1,h2,h3,h4,h5,h6,p{
     color: #6C6C6C;
 }
-.active{
-    color: #d26900;
+h2{
+    font-weight: 600;
+}
+article p{
+    font-size: 20px;
+}
+span{
+    font-size: 20px;
 }
 nav{
     margin-top: 5px;
 }
-nav li{
+nav .nav-item{
     padding-right: 15px;
+}
+input[type=text]:focus{
+    box-shadow:0 0 0 0.2rem rgb(255 193 7 / 50%);
+    -moz-box-shadow:0 0 0 0.2rem rgb(255 193 7 / 50%);
+    -webkit-box-shadow:0 0 0 0.2rem rgb(255 193 7 / 50%);
+}
+.container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
 }
 .btn-outline-warning{
     color: #ffa042;
@@ -29,10 +44,9 @@ nav li{
     background-color: #ffa042;
     border-color: #ffa042;
 }
-.form-control:focus {
+.form-control:focus{
     color: #ffa042;
 }
-
 .form-control{
     color: #ea7500;
 }
@@ -48,20 +62,38 @@ nav li{
 .form-control::-moz-placeholder{
     color: #ffa042;
 }
-#intro li a{
-    color: #ea7500;
+#intro{
+    margin-bottom: 20px;
+}
+#intro li button{
+    color: #d66e06;
     font-size: 28px;
+    font-weight: 500;
+    text-align: left;
+    border: 0;
+    background-color:#ffffff00;
 }
-#intro li a.active{
+#intro li button.active{
     font-weight: 900;
-    color: #d26900;
+    color: #ad5700;
 }
-#intro li a:hover {
-    color: #d26900;
+#intro li button:hover{
+    color: #ad5700;
+}
+#intro li button:focus{
+    outline: none;
 }
 #intro img{
     margin-bottom: 25px;
 }
 article{
     margin-top: 80px;
+}
+article div{
+    float: left;
+}
+#footer{
+    background-color: #6c6c6c60;
+    padding-top: 20px;
+    padding-bottom: 40px;
 }

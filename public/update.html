@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <h3>分類</h3>
+        <select id="sort"></select>
+        <h3>貨號</h3>
+        <input type="text" id="number">
+        <h3>品名</h3>
+        <input type="text" id="name">
+        <h3>價錢</h3>
+        <input type="number" id="price">
+        <br><br>
+        <input type="file" id="fileButton" value="upload">
+        <br><br>
+        <button onclick="add()">新增</button>
+    </body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script>
+        firebase.initializeApp({
+            apiKey: "AIzaSyCfo1lZapLv7Mzalkz624DXydtTXGJelOA",
+            authDomain: "wanxin.firebaseapp.com",
+            storageBucket: 'wanxin.appspot.com',
+            projectId: "wanxin",
+        });
+        const db = firebase.firestore();
+        const storage = firebase.storage();
+
+        db.collection("公司").doc("分類").get().then((doc)=>{
+            var sort = document.getElementById("sort");
+            
+            var option1 = document.createElement("option");
+            option1.appendChild(document.createTextNode(doc.data().first));
+            sort.appendChild(option1);
+            var option2 = document.createElement("option");
+            option2.appendChild(document.createTextNode(doc.data().second));
+            sort.appendChild(option2);
+            var option3 = document.createElement("option");
+            option3.appendChild(document.createTextNode(doc.data().third));
+            sort.appendChild(option3);
+            var option4 = document.createElement("option");
+            option4.appendChild(document.createTextNode(doc.data().forth));
+            sort.appendChild(option4);
+            var option5 = document.createElement("option");
+            option5.appendChild(document.createTextNode(doc.data().fifth));
+            sort.appendChild(option5);
+            var option6 = document.createElement("option");
+            option6.appendChild(document.createTextNode(doc.data().sixth));
+            sort.appendChild(option6);
+            var option7 = document.createElement("option");
+            option7.appendChild(document.createTextNode(doc.data().seventh));
+            sort.appendChild(option7);
+            var option8 = document.createElement("option");
+            option8.appendChild(document.createTextNode(doc.data().eighth));
+            sort.appendChild(option8);
+            var option9 = document.createElement("option");
+            option9.appendChild(document.createTextNode(doc.data().nineth));
+            sort.appendChild(option9);
+            var option10 = document.createElement("option");
+            option10.appendChild(document.createTextNode(doc.data().tenth));
+            sort.appendChild(option10);
+            var option11 = document.createElement("option");
+            option11.appendChild(document.createTextNode(doc.data().eleventh));
+            sort.appendChild(option11);
+            var option12 = document.createElement("option");
+            option12.appendChild(document.createTextNode(doc.data().twelveth));
+            sort.appendChild(option12);
+
+        }).catch((e)=>{
+            // console.log(e);
+        })
+        
+        function add(){  
+            var sort = document.getElementById("sort").value;
+            var number = document.getElementById("number").value;
+            var name = document.getElementById("name").value;
+            var price = document.getElementById("price").value
+
+            db.collection(sort).doc(number).set({
+                name: name,
+                price: "$"+price
+            }, {merge: true});
+
+            var file = document.getElementById('fileButton').files[0];
+                storage.ref(sort+'/'+number).put(file);
+
+            alert("新增成功");
+        }
+    </script>
+</html>
